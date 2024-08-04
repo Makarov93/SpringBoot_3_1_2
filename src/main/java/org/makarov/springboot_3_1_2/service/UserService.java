@@ -2,7 +2,6 @@ package org.makarov.springboot_3_1_2.service;
 
 import org.makarov.springboot_3_1_2.model.User;
 import org.makarov.springboot_3_1_2.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
-    @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }

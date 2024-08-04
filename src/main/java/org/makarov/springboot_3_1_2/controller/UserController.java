@@ -2,7 +2,6 @@ package org.makarov.springboot_3_1_2.controller;
 
 import org.makarov.springboot_3_1_2.model.User;
 import org.makarov.springboot_3_1_2.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +11,11 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
 
     @GetMapping("/user_list")
