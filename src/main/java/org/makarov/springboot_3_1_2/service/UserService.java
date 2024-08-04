@@ -3,8 +3,8 @@ package org.makarov.springboot_3_1_2.service;
 import org.makarov.springboot_3_1_2.model.User;
 import org.makarov.springboot_3_1_2.repository.UserRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
